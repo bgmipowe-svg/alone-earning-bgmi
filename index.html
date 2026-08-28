@@ -2,77 +2,283 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ALONE EARNING BGMI community website">
 <title>ALONE EARNING BGMI</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#080b12;color:#fff}
-header{padding:18px 16px;background:linear-gradient(135deg,#101827,#18243b);position:sticky;top:0;z-index:5}
-.logo{font-weight:900;font-size:22px;letter-spacing:1px}.logo span{color:#ffd23f}
-nav{display:flex;gap:8px;overflow:auto;margin-top:14px}nav button{background:#202b40;color:#fff;border:0;border-radius:20px;padding:9px 14px;white-space:nowrap}
-.hero{padding:38px 18px;text-align:center;background:radial-gradient(circle at 50% 20%,#253b66 0,#0b101b 58%);min-height:300px}
-.badge{display:inline-block;padding:7px 12px;border-radius:20px;background:#ffd23f;color:#111;font-weight:bold;font-size:12px}
-h1{font-size:40px;margin:18px 0 10px}.hero p{color:#b8c2d6;max-width:600px;margin:0 auto 22px;line-height:1.5}
-.cta{display:inline-block;background:#ffd23f;color:#111;padding:13px 20px;border-radius:12px;font-weight:800;text-decoration:none}
-.container{max-width:1050px;margin:auto;padding:28px 16px}.title{font-size:25px;margin-bottom:15px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.card{background:#111827;border:1px solid #263148;border-radius:16px;padding:18px}.card h3{margin:8px 0}.card p{color:#aeb8ca;line-height:1.45;font-size:14px}
-.icon{font-size:30px}.earn{border-left:4px solid #ffd23f}
-.ad{margin:24px 0;padding:22px;text-align:center;border:1px dashed #53617b;border-radius:14px;color:#7f8ba1}
-footer{padding:25px 16px;text-align:center;color:#778399;border-top:1px solid #1d2636}
-@media(max-width:500px){h1{font-size:32px}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#080b12;
+  color:#fff;
+}
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  padding:14px 16px;
+  background:linear-gradient(135deg,#101827,#18243b);
+  border-bottom:1px solid #263148;
+}
+.header-inner{
+  max-width:1100px;
+  margin:auto;
+}
+.logo{
+  font-weight:900;
+  font-size:22px;
+  letter-spacing:1px;
+}
+.logo span{color:#ffd23f}
+nav{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  margin-top:12px;
+  padding-bottom:2px;
+}
+nav button,nav a{
+  flex:0 0 auto;
+  border:0;
+  border-radius:20px;
+  padding:9px 14px;
+  background:#202b40;
+  color:#fff;
+  font-weight:bold;
+  text-decoration:none;
+  cursor:pointer;
+}
+nav button:hover,nav a:hover{filter:brightness(1.15)}
+nav .telegram{background:#229ed9}
+
+.hero{
+  padding:55px 18px;
+  text-align:center;
+  background:radial-gradient(circle at 50% 20%,#253b66 0,#0b101b 62%);
+}
+.hero-inner{max-width:750px;margin:auto}
+.badge{
+  display:inline-block;
+  padding:7px 12px;
+  border-radius:20px;
+  background:#ffd23f;
+  color:#111;
+  font-weight:bold;
+  font-size:12px;
+}
+h1{font-size:44px;margin:18px 0 10px}
+.hero p{
+  max-width:650px;
+  margin:0 auto 24px;
+  line-height:1.6;
+  color:#b8c2d6;
+}
+.cta{
+  display:inline-block;
+  background:#ffd23f;
+  color:#111;
+  padding:12px 18px;
+  border-radius:12px;
+  font-weight:800;
+  text-decoration:none;
+  border:0;
+  cursor:pointer;
+}
+.cta:hover{filter:brightness(1.08)}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:28px 16px;
+}
+.section{scroll-margin-top:120px}
+.title{font-size:26px;margin:0 0 16px}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:14px;
+}
+.card{
+  background:#111827;
+  border:1px solid #263148;
+  border-radius:16px;
+  padding:18px;
+}
+.card h3{margin:8px 0}
+.card p{
+  color:#aeb8ca;
+  line-height:1.5;
+  font-size:14px;
+}
+.icon{font-size:30px}
+.earn{border-left:4px solid #ffd23f}
+.ad{
+  margin:24px 0;
+  padding:22px;
+  text-align:center;
+  border:1px dashed #53617b;
+  border-radius:14px;
+  color:#7f8ba1;
+}
+.notice{
+  margin:0 0 28px;
+  padding:16px;
+  background:#101827;
+  border:1px solid #263148;
+  border-radius:14px;
+  color:#b8c2d6;
+}
+footer{
+  padding:25px 16px;
+  text-align:center;
+  color:#778399;
+  border-top:1px solid #1d2636;
+}
+@media(max-width:500px){
+  h1{font-size:34px}
+  .hero{padding:42px 16px}
+}
 </style>
 </head>
-<body>
-<header>
-  <div class="logo">ALONE <span>EARNING BGMI</span></div>
-  <nav>
 
-    <button onclick="go('home')">Home</button>
-<button onclick="go('deals')">Deals</button>
-<button onclick="go('events')">Events</button>
-<button onclick="go('earn')">Earn</button>
-  
-<a href="https://t.me/ALONE_OWNER_OP">Telegram</a>
-  </nav>  
-  
-  \u003Ca class=\"cta\" href=\"#earn\">Start Exploring\u003C/a>
-<section class="hero" id="home">
-  <span class="badge">BGMI COMMUNITY • REWARDS • DEALS</span>
-  <h1>ALONE EARNING BGMI</h1>
-  <p>BGMI community updates, legitimate offers, events and earning opportunities — all in one place.</p>
-  <a class="cta" href="#earn">Start Exploring</a>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">ALONE <span>EARNING BGMI</span></div>
+    <nav aria-label="Main navigation">
+      <button type="button" onclick="go('home')">Home</button>
+      <button type="button" onclick="go('deals')">Deals</button>
+      <button type="button" onclick="go('events')">Events</button>
+      <button type="button" onclick="go('earn')">Earn</button>
+      <a class="telegram"
+         href="https://t.me/ALONE_OWNER_OP"
+         target="_blank"
+         rel="noopener noreferrer">Telegram</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero section" id="home">
+  <div class="hero-inner">
+    <span class="badge">BGMI COMMUNITY • REWARDS • DEALS</span>
+    <h1>ALONE EARNING BGMI</h1>
+    <p>
+      BGMI community updates, legitimate offers, events and earning
+      opportunities — all in one place.
+    </p>
+    <a class="cta" href="#deals">Start Exploring</a>
+  </div>
 </section>
 
 <div class="container">
-  <div class="ad">ADVERTISEMENT SPACE — connect your approved ad network here</div>
 
-  <h2 class="title" id="deals">🔥 Featured Deals</h2>
-  <div class="grid">
-    <div class="card"><div class="icon">🛒</div><h3>Gaming Accessories</h3><p>Promote genuine gaming products using your approved affiliate links.</p><a class="cta" href="#" onclick="demo('Add your affiliate URL here')">View Deal</a></div>
-    <div class="card"><div class="icon">🎧</div><h3>Gaming Gear</h3><p>Showcase useful gaming gear and earn eligible affiliate commissions.</p><a class="cta" href="#" onclick="demo('Add your affiliate URL here')">View Deal</a></div>
-    <div class="card"><div class="icon">📱</div><h3>Mobile Gaming</h3><p>Share legitimate accessories, apps and offers with your audience.</p><a class="cta" href="#" onclick="demo('Add your affiliate URL here')">View Deal</a></div>
+  <div class="notice">
+    <strong>Welcome!</strong> Check the latest deals, community events and
+    legitimate earning information below.
   </div>
 
-  <h2 class="title" id="events" style="margin-top:34px">🏆 Events</h2>
-  <div class="grid">
-    <div class="card"><h3>Community Tournament</h3><p>Publish your own legitimate tournament details, rules and registration link.</p></div>
-    <div class="card"><h3>Weekly Challenge</h3><p>Engage visitors with community challenges and sponsor-supported rewards.</p></div>
+  <div class="ad">
+    ADVERTISEMENT SPACE — connect your approved ad network here
   </div>
 
-  <h2 class="title" id="earn" style="margin-top:34px">💰 How You Can Earn</h2>
-  <div class="grid">
-    <div class="card earn"><h3>Ads</h3><p>Apply to an ad network and place approved ads after your site has useful original content.</p></div>
-    <div class="card earn"><h3>Affiliate</h3><p>Add your own approved affiliate links to relevant gaming products and deals.</p></div>
-    <div class="card earn"><h3>Sponsored Events</h3><p>Work with legitimate sponsors for community tournaments and promotions.</p></div>
+  <section class="section" id="deals">
+    <h2 class="title">🔥 Featured Deals</h2>
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">🛒</div>
+        <h3>Gaming Accessories</h3>
+        <p>Explore gaming accessories and products.</p>
+        <a class="cta" href="https://www.amazon.in/" target="_blank" rel="noopener noreferrer">View Deal</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎧</div>
+        <h3>Gaming Gear</h3>
+        <p>Browse useful gaming gear and accessories.</p>
+        <a class="cta" href="https://www.amazon.in/" target="_blank" rel="noopener noreferrer">View Deal</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>Mobile Gaming</h3>
+        <p>Find mobile gaming accessories and products.</p>
+        <a class="cta" href="https://www.amazon.in/" target="_blank" rel="noopener noreferrer">View Deal</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="events" style="margin-top:38px">
+    <h2 class="title">🏆 Events</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Community Tournament</h3>
+        <p>Publish legitimate tournament details, rules and registration information.</p>
+        <a class="cta" href="https://t.me/ALONE_OWNER_OP" target="_blank" rel="noopener noreferrer">Join on Telegram</a>
+      </div>
+
+      <div class="card">
+        <h3>Weekly Challenge</h3>
+        <p>Follow the community for challenge announcements and updates.</p>
+        <a class="cta" href="https://t.me/ALONE_OWNER_OP" target="_blank" rel="noopener noreferrer">Get Updates</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="earn" style="margin-top:38px">
+    <h2 class="title">💰 How You Can Earn</h2>
+    <div class="grid">
+
+      <div class="card earn">
+        <h3>Ads</h3>
+        <p>Apply to an approved ad network and place ads after your site has useful original content.</p>
+        <a class="cta" href="#home">Learn More</a>
+      </div>
+
+      <div class="card earn">
+        <h3>Affiliate</h3>
+        <p>Use approved affiliate programs and clearly disclose affiliate links.</p>
+        <a class="cta" href="#deals">See Deals</a>
+      </div>
+
+      <div class="card earn">
+        <h3>Sponsored Events</h3>
+        <p>Work with legitimate sponsors for community events and promotions.</p>
+        <a class="cta" href="https://t.me/ALONE_OWNER_OP" target="_blank" rel="noopener noreferrer">Contact</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="ad">
+    ADVERTISEMENT SPACE
   </div>
 
-  <div class="ad">ADVERTISEMENT SPACE</div>
 </div>
+</main>
 
-<footer>© 2026 ALONE EARNING BGMI • Independent community website. Not affiliated with KRAFTON/BGMI.</footer>
+<footer>
+  © 2026 ALONE EARNING BGMI • Independent community website.
+  Not affiliated with KRAFTON/BGMI.
+</footer>
+
 <script>
-function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
-function demo(msg){event.preventDefault();alert(msg)}
+function go(id){
+  const section = document.getElementById(id);
+  if(section){
+    section.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+}
 </script>
+
 </body>
 </html>
